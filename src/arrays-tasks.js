@@ -141,7 +141,6 @@ function getAverage(arr) {
   } else {
     const newArr = arr.reduce((acc, elem) => acc + elem);
     result = Math.round((newArr / arr.length) * 100) / 100;
-    console.log(newArr);
   }
   return result;
 }
@@ -605,7 +604,7 @@ function findLongestIncreasingSubsequence(nums) {
   function checkIncreasing(elem) {
     if (nums.indexOf(elem) > 0) {
       const previousNum = nums[nums.indexOf(elem) - 1];
-      console.log(`prevNum==${previousNum}`);
+
       if (elem > previousNum) {
         tempNumber += 1;
         if (tempNumber > result) {
